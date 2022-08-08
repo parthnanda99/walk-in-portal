@@ -1,0 +1,308 @@
+<div class="bar">
+  <img (click)="back()" src="../../assets/images/back.svg" alt="">
+  <p>Create An Account</p>
+  <div class="btn-list">
+    <button class="btn">
+      CANCEL
+    </button>
+    <button class="btn">
+      CREATE
+    </button>
+  </div>
+</div>
+<main>
+  <div class="steps-nav">
+    <div class="step">
+      <div class="circle">
+        1
+      </div>
+      <p class="step-name">
+        Personal Information
+      </p>
+    </div>
+    <div class="step">
+      <span class="line">
+
+      </span>
+    </div>
+    <div class="step">
+      <div class="circle">
+        2
+      </div>
+      <p class="step-name">
+        Qualifications
+      </p>
+    </div>
+    <div class="step">
+      <span class="line">
+
+      </span>
+    </div>
+    <div class="step">
+      <div class="circle bg-grey">
+        3
+      </div>
+      <p class="step-name">
+        Review and Proceed
+      </p>
+    </div>
+  </div>
+
+  <div class="qualification">
+    <div class="header-bar">
+      <p>Educational Qualifications</p>
+      <div class="img-contain">
+
+      </div>
+    </div>
+    <div class="qualifications-details">
+      <div class="quali-fields">
+        <p>Aggregate Percentage*</p>
+        <input type="text" id="percent" placeholder="65" class="small">
+      </div>
+      <div class="quali-fields">
+        <p>Year of Passing*</p>
+        <select name="year" id="year" class="custom-select">
+          <option value="2020">2020</option>
+        </select>
+      </div>
+      <div class="select-fields">
+        <div class="field">
+          <p>Qualification*</p>
+          <select name="degree" id="degree" class="custom-select">
+            <option value="Bachelor in Technology (B.Tech)">Bachelor in Technology (B.Tech)</option>
+          </select>
+        </div>
+        <div class="field">
+          <p>Stream*</p>
+          <select name="sub" id="sub" class="custom-select">
+            <option value="Information Technology">Information Technology</option>
+          </select>
+        </div>
+        <div class="field">
+          <p>College*</p>
+
+          <select name="college" id="college" class="custom-select">
+            <option value="Pune Institute of Technology (PIT)">Pune Institute of Technology (PIT)
+            </option>
+          </select>
+        </div>
+        <div class="field">
+          <p>If others, please enter your college name</p>
+          <input type="text" value="others" class="custom-select">
+        </div>
+
+      </div>
+      <div class="quali-fields">
+        <p>Where is your college located?*</p>
+        <input type="text" id="location" class="small bt">
+      </div>
+    </div>
+  </div>
+  <div class="prof-qualification">
+    <div class="header-bar">
+      <p>Professional Qualifications</p>
+      <div class="img-contain prof_qualification_image">
+
+      </div>
+    </div>
+    <div class="prof_qualification_menu">
+      <div class="applicant-type">
+        <p>Applicant Type*</p>
+        <div class="ap-btns">
+          <div class="ap1">
+            <img src="../../assets/images/radio-button-on.svg" alt="" class="on1">
+            <img src="../../assets/images/radio-button-off.svg" class="off1">
+
+
+
+            <p>Fresher</p>
+          </div>
+          <div class="ap2">
+            <img src="../../assets/images/radio-button-off.svg" class="off2">
+            <img src="../../assets/images/radio-button-on.svg" alt="" class="on2">
+
+            <p>Experienced</p>
+          </div>
+        </div>
+      </div>
+      <div class="applicant-details fresher">
+        <p>Select All The Technologies You Are Familiar In</p>
+        <div class="tech-selector">
+          <div class="tech">
+            <input type="checkbox" name="TechChecks" id="Technologies" />
+            <label for="TechChecks">Javascript</label>
+          </div>
+          <div class="tech">
+            <input type="checkbox" name="TechChecks" id="Technologies" />
+            <label for="TechChecks">Angular JS</label>
+          </div>
+          <div class="tech">
+            <input type="checkbox" name="TechChecks" id="Technologies" />
+            <label for="TechChecks">React</label>
+          </div>
+          <div class="tech">
+            <input type="checkbox" name="TechChecks" id="Technologies" />
+            <label for="TechChecks">Node JS</label>
+          </div>
+          <div class="tech">
+            <input type="checkbox" name="TechChecks" id="Technologies" />
+            <label for="TechChecks">others</label>
+          </div>
+        </div>
+        <div class="others">
+          <p>If others, please mention</p>
+          <input type="text" name="others" id="others" class="textfield">
+        </div>
+        <div class="appeared">
+          <p>Have You Appeared For Any Test By Zeus in the past 12 months?*</p>
+          <div class="rd-btns">
+            <div class="rd">
+              <img src="../../assets/images/radio-button-on.svg" alt="">
+
+              <p>Yes</p>
+            </div>
+            <div class="rd">
+              <img src="../../assets/images/radio-button-off.svg" alt="">
+
+              <p>No</p>
+            </div>
+          </div>
+        </div>
+        <div class="yes-role">
+          <p>If Yes, which role did you apply for?</p>
+          <input type="text" name="role" id="role" class="textfield">
+        </div>
+      </div>
+      <div class="applicant-details experienced">
+        <div class="years">
+          <p>Years of Experience*</p>
+          <input type="text" id="years" class="small">
+        </div>
+        <div class="current-ctc">
+          <p>Current CTC* (In Rupees)</p>
+          <input type="text" id="ctc" class="small">
+
+        </div>
+        <div class="expected-ctc">
+          <p>Expected CTC* (In Rupees)</p>
+          <input type="text" id="current-ctc" class="small">
+        </div>
+        <div class="expertise">
+          <p>Select All The Technologies You Expertise In*</p>
+          <div class="tech-selector">
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Javascript</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Angular JS</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">React</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Node JS</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">others</label>
+            </div>
+          </div>
+          <div class="others">
+            <p>If others, please mention</p>
+            <input type="text" name="others" id="others" class="textfield">
+          </div>
+        </div>
+        <div class="familiar">
+          <p>Select All The Technologies You Are Familiar In</p>
+          <div class="tech-selector">
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Javascript</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Angular JS</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">React</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Node JS</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">others</label>
+            </div>
+            <div class="others">
+              <p>If others, please mention</p>
+              <input type="text" name="others" id="others" class="textfield">
+            </div>
+          </div>
+          <div class="notice-period appeared">
+            <p class="appear">Are you currently on notice period?*</p>
+            <div class="rd-btns">
+              <div class="rd yes">
+                <img src="../../assets/images/radio-button-on.svg" alt="" class="on3">
+                <img src="../../assets/images/radio-button-off.svg" alt="" class="off3">
+
+                <p>Yes</p>
+              </div>
+              <div class="rd no">
+                <img src="../../assets/images/radio-button-off.svg" alt="" class="off4">
+                <img src="../../assets/images/radio-button-on.svg" alt="" class="on4">
+
+                <p>No</p>
+              </div>
+            </div>
+            <div class="notice-info">
+              <div class="info">
+                <p>If Yes, when will your notice period end?*</p>
+                <input type="date" class="custom-select">
+              </div>
+              <div class="info">
+                <p>How long is your notice period?* (Mention in months)</p>
+                <select name="months" id="month" class="custom-select">
+                  <option value="2 months">2 months</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="appeared">
+            <p>Have You Appeared For Any Test By Zeus in the past 12 months?*</p>
+            <div class="rd-btns">
+              <div class="rd">
+                <img src="../../assets/images/radio-button-on.svg" alt="">
+
+                <p>Yes</p>
+              </div>
+              <div class="rd">
+                <img src="../../assets/images/radio-button-off.svg" alt="">
+
+                <p>No</p>
+              </div>
+            </div>
+          </div>
+          <div class="yes-role">'
+            <p>If Yes, which role did you apply for?</p>
+            <input type="text" name="role" id="role" class="textfield">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btns">
+      <button (click)="back()" class="btn">
+        PREVIOUS
+      </button>
+      <button routerLink="/review-page" class="btn">
+        NEXT
+      </button>
+    </div>
+  </div>
+</main>

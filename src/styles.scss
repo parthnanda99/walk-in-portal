@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../src/assets/QuicksandFonts/static/Quicksand-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../src/assets/QuicksandFonts/static/Quicksand-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../src/assets/QuicksandFonts/static/Quicksand-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../src/assets/QuicksandFonts/static/Quicksand-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../src/assets/QuicksandFonts/static/Quicksand-Light.ttf);
+    font-weight: 300;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Quicksand';
+}

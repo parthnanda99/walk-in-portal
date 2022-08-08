@@ -1,0 +1,136 @@
+<div class="bar">
+  <img (click)="back()" src="../../assets/images/back.svg" alt="">
+  <p>Create An Account</p>
+  <div class="btn-list">
+    <button class="btn">
+      CANCEL
+    </button>
+    <button class="btn">
+      CREATE
+    </button>
+  </div>
+</div>
+<main>
+  <div class="steps-nav">
+    <div class="step">
+      <div class="circle">
+        1
+      </div>
+      <p class="step-name">
+        Personal Information
+      </p>
+    </div>
+    <div class="step">
+      <span class="line">
+
+      </span>
+    </div>
+    <div class="step">
+      <div class="circle bg-grey">
+        2
+      </div>
+      <p class="step-name">
+        Qualifications
+      </p>
+    </div>
+    <div class="step">
+      <span class="line">
+
+      </span>
+    </div>
+    <div class="step">
+      <div class="circle bg-grey">
+        3
+      </div>
+      <p class="step-name">
+        Review and Proceed
+      </p>
+    </div>
+  </div>
+  <div class="section-details">
+    <div class="container">
+      <div class="details">
+        <form action="#">
+          <div class="first-name ">
+            <p>First Name*</p>
+            <input type="text" name="username" id="last-name" class="dtails-info" placeholder="John" />
+          </div>
+          <div class="last-name box">
+            <p>Last Name*</p>
+            <input type="text" name="last-name" id="last-name" class="dtails-info" placeholder="Watson" />
+          </div>
+          <div class="email box">
+            <p>Email*</p>
+            <input type="text" name="email" id="email" class="dtails-info" placeholder="Johnwatson@example.comohn" />
+          </div>
+          <div class="number box">
+            <p>Number*</p>
+            <div class="number-info">
+              <input type="text" name="number" id="number" class="dtails-info" placeholder="+91 9876543210" />
+            </div>
+          </div>
+          <div class="resume box">
+            <img src="../../assets/quantumScreenAssets/icons/reports.svg" alt="">
+
+            <label for="upload">
+
+
+              <p class="upload-resume">UPLOAD RESUME</p>
+              <input type="file" name="upload" id="upload" style="display: none;">
+
+            </label>
+          </div>
+          <div class="portfolio box">
+            <p>Enter Portfolio URL (if any)</p>
+            <input type="text" name="portfolio" id="portfolio" class="dtails-info" placeholder="www.myportfolio.in" />
+          </div>
+          <div class="job-roles box">
+            <p>Preferred Job Roles*</p>
+            <div class="roles">
+              <div class="role">
+                <input type="checkbox" name="roleCheck" id="diffrentRoles" />
+                <label for="roleCheck">Instructional Designer</label>
+
+              </div>
+              <div class="role">
+                <input type="checkbox" name="roleCheck" id="diffrentRoles" />
+                <label for="roleCheck">Software Engineer</label>
+              </div>
+              <div class="role">
+                <input type="checkbox" name="roleCheck" id="diffrentRoles" />
+                <label for="roleCheck">Software Quality Engineer</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="referral box">
+            <p>If You Are Registering Via A Referral, Please Mention Full Name Of The Employee Who
+              Referred You</p>
+            <input type="text" name="referral" id="referral" class="dtails-info">
+          </div>
+          <div class="notification">
+            <input type="checkbox" name="mailUpdate" id="mailUpdate" />
+            <label for="mailUpdate">Send me job related updates via mail</label>
+
+          </div>
+
+        </form>
+      </div>
+      <div class="profile-section">
+        <div class="profile-info">
+          <div class="img-container">
+
+
+          </div>
+          <p>UPLOAD DISPLAY PICTURE</p>
+          <span>Max. image size: 5 MB</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <button routerLink="/qualification-page" class="btn">
+    NEXT
+  </button>
+</main>

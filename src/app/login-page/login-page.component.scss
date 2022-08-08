@@ -1,0 +1,146 @@
+
+  .container {
+	border-radius: 4px;
+	border-top: 4px solid #3ac7ec;
+	width: 488px;
+	margin: 201px auto 148px;
+	background-color: #ffffff;
+	padding: 20px 32px;
+}
+.Header-title {
+	display: flex;
+    justify-content: center;
+}
+h1 {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 28px;
+}
+
+#username {
+	margin-top: 32px;
+}
+#password {
+	margin-top: 33px;
+}
+.login-info {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #e0e0e0;
+	padding: 2px 0;
+	font-size: 16px;
+	line-height: 20px;
+}
+.eye-icon {
+	position: relative;
+	left: 400px;
+	bottom: 32px;
+	cursor: pointer;
+}
+.forgot-text {
+	font-size: 14px;
+	line-height: 16px;
+	color: #1f7a54;
+	float: right;
+	margin-top: 4px;
+	font-weight: 700;
+}
+.LoginButton {
+	display: block;
+	margin: 34px auto 0;
+	background-color: #3fd28b;
+	height: 40px;
+	width: 216px;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0px 3px 5px #0000003d;
+	font-size: 14px;
+	cursor: pointer;
+	font-weight: 500;
+}
+
+.createAcc{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.notRegister{
+    font-size: 12px;
+    color: #222222;
+}
+.createButton{
+    margin-top: 4px;
+    color: #1f7a54;
+	background-color:transparent;
+	border: none;
+	font-size: 14px;
+	cursor: pointer;
+	font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    text-align: right;
+    
+}
+.about {
+    margin-top: 90px;
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+	line-height: 18px;
+	color: #1f7a54;
+	gap: 8px;
+	margin-bottom: 40px;
+    a {
+        color: #1f7a54;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+input[type="password"]{
+  outline: 0;
+}
+input[type= "email"]{
+  outline: 0;
+}
+
+input[type="checkbox"]:checked {
+  background: #1f7a54;
+  color: white;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  height: 19px;
+  width: 19px;
+  border: 2.5px solid #1f7a54;
+  border-radius: 10%;
+  color: white;
+}
+
+input[type="checkbox"]:after {
+  content: ' ';
+  position: relative;
+  left: 25%;
+  top: -7%;
+  width: 35%;
+  height: 77%;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(50deg);
+  display: none;
+}
+
+input[type="checkbox"]:checked:after {
+  display: block;
+}
+.rememberMe{
+  display: flex;
+  gap: 5px;
+}
