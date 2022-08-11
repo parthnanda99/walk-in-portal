@@ -14,7 +14,7 @@ $nav-bg-color: #25313f;
 }
 
 .custom-select {
-  height: 40px;
+  height: 27px;
   border: 0px;
   width: 100%;
   border-bottom: 1px solid #c4c4c4;
@@ -34,50 +34,6 @@ select {
   background-position: calc(100% - 4px) center;
   background-repeat: no-repeat;
   background-size: 20px;
-}
-
-// bar
-.bar {
-  margin-top: 56px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #3C4E62;
-  padding: 0px 24px;
-  height: 48px;
-  img{
-    cursor: pointer;
-  }
-
-  p {
-      color: white;
-  }
-
-  .btn-list {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      margin-right: 10px;
-
-      :nth-child(1) {
-          margin-right: 16px;
-      }
-
-      .btn {
-          background-color: #3fd28b;
-          padding: 5px 15px;
-          font-weight: 500;
-          border: none;
-          border-radius: 2px;
-          box-shadow: 0px 1px 1px #000000;
-          font-size: 14px;
-          line-height: 18px;
-          cursor: pointer;
-      }
-  }
-
 }
 
 .box {
@@ -209,10 +165,11 @@ main {
                 font-size: 12px;
                 color: #666666;
                 font-weight: 500;
-                margin: 0px 0px 12px 0px;
+                margin: 0px 0px 6px 0px;
             }
 
             .quali-fields {
+                margin-top: 30px;
                 .custom-select {
                     width: 180px;
 
@@ -301,20 +258,25 @@ main {
                 align-items: center;
                 margin: 0;
 
+
                 .ap1,.ap2 {
                     margin: 0;
 
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    cursor: pointer;
-
-                    img {
+                    cursor: pointer;    
+                    
+                    input[type="radio"]{
+                        width: 20px;
+                        height: 24px;
+                        accent-color: #1f7a54;
                         margin-left: 24px;
                         padding: 0;
+
                     }
 
-                    p {
+                    label{
                         margin: 0px 0px 0px 8px;
                         padding: 0;
                         font-size: 16px;
@@ -429,6 +391,23 @@ main {
                 .rd-btns {
                     display: flex;
                     flex-direction: row;
+                      
+                    input[type="radio"]{
+                        width: 20px;
+                        height: 24px;
+                        accent-color: #1f7a54;
+                       
+                        padding: 0;
+
+                    }
+
+                    label{
+                        margin: 0px 0px 0px 8px;
+                        padding: 0;
+                        font-size: 16px;
+                        color: #222222;
+                        font-weight: 600;
+                    }
                 }
 
                 .rd {
@@ -511,5 +490,20 @@ main {
     display: none;
 }
 input{
+    outline: 0;
+}
+.validation{
+    position: absolute;
+    display: flex;
+    gap: 30px;
+    
+}
+.form-text{
+    color: red;
+    display: inline-block;
+    margin-top: 6px;
+    
+}
+select{
     outline: 0;
 }

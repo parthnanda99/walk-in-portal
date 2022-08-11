@@ -1,0 +1,378 @@
+<app-create-account-bar></app-create-account-bar>
+
+<main>
+  <div class="steps-nav">
+    <div class="step">
+      <div class="circle">
+        1
+      </div>
+      <p class="step-name">
+        Personal Information
+      </p>
+    </div>
+    <div class="step">
+      <span class="line">
+
+      </span>
+    </div>
+    <div class="step">
+      <div class="circle">
+        2
+      </div>
+      <p class="step-name">
+        Qualifications
+      </p>
+    </div>
+    <div class="step">
+      <span class="line">
+
+      </span>
+    </div>
+    <div class="step">
+      <div class="circle bg-grey">
+        3
+      </div>
+      <p class="step-name">
+        Review and Proceed
+      </p>
+    </div>
+  </div>
+
+  <div [formGroup]="EducationDetailsForm"  class="qualification">
+    <div class="header-bar">
+      <p>Educational Qualifications</p>
+      <div class="img-contain">
+
+      </div>
+    </div>
+    <div class="qualifications-details">
+      <div class="quali-fields">
+        <p>Aggregate Percentage*</p>
+        <input type="text" id="percent" placeholder="65" formControlName="Percentage" class="small">
+        <div class="validation">
+          <div class="form-text" *ngIf="Percentage.errors?.['required']
+             && (Percentage.touched || Percentage.dirty)">Percentage is required*</div>
+          <div class="form-text" *ngIf="Percentage.errors?.['minlength'] && (Percentage.touched || Percentage.dirty)">
+            Enter valid Percentage </div>
+          <div class="form-text" *ngIf="Percentage.errors?.['pattern'] && (Percentage.touched || Percentage.dirty)">
+            alphabet is not allowed. </div>
+        </div>
+      </div>
+      <div class="quali-fields">
+        <p>Year of Passing*</p>
+
+        <select name="year" id="year" class="custom-select" formControlName="SelectYear">
+          <option disabled selected hidden value="">select year</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+        </select>
+        <div class="validation">
+          <div class="form-text" *ngIf="SelectYear.errors?.['required']
+             && (SelectYear.touched || SelectYear.dirty)">year is required*</div>
+
+
+        </div>
+
+      </div>
+      <div class="select-fields">
+        <div class="field">
+          <p>Qualification*</p>
+          <select name="degree" id="degree" class="custom-select" formControlName="SelectDegree">
+            <option disabled selected hidden value="">select Qualification</option>
+            <option value="Bachelor in Technology (B.Tech)">Bachelor in Technology (B.Tech)</option>
+            <option value="Master in Technology (M.Tech)">Master in Technology (M.Tech)</option>
+            <option value="Bachelor Of Engineering (B.E)">Bachelor Of Engineering (B.E)</option>
+          </select>
+          <div class="validation">
+            <div class="form-text" *ngIf="SelectDegree.errors?.['required']
+               && (SelectDegree.touched || SelectDegree.dirty)">Qualification is required*</div>
+
+
+          </div>
+        </div>
+        <div class="field">
+          <p>Stream*</p>
+
+          <select name="sub" id="sub" class="custom-select" formControlName="SelectStream">
+            <option disabled selected hidden value="">select Stream</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="CSE">CSE</option>
+
+          </select>
+          <div class="validation">
+            <div class="form-text" *ngIf="SelectStream.errors?.['required']
+               && (SelectStream.touched || SelectStream.dirty)">Stream is required*</div>
+
+
+          </div>
+        </div>
+        <div class="field">
+          <p>College*</p>
+
+          <select name="college" id="college" class="custom-select" formControlName="SelectCollege">
+            <option disabled selected hidden value="">select College</option>
+            <option value="Pune Institute of Technology (PIT)">Pune Institute of Technology (PIT)
+            </option>
+            <option value="HJD">HJd
+            </option>
+            <option value="other">Other
+            </option>
+          </select>
+          <div class="validation">
+            <div class="form-text" *ngIf="SelectCollege.errors?.['required']
+               && (SelectCollege.touched || SelectCollege.dirty)">Stream is required*</div>
+
+
+          </div>
+        </div>
+        <div class="field">
+          <p>If others, please enter your college name</p>
+          <input type="text" value="" class="custom-select">
+        </div>
+
+      </div>
+      <div class="quali-fields">
+        <p>Where is your college located?*</p>
+        <input type="text" id="location" class="small bt" formControlName="CollegeLocation">
+        <div class="validation">
+          <div class="form-text" *ngIf="CollegeLocation.errors?.['required']
+             && (CollegeLocation.touched || CollegeLocation.dirty)">Location is required*</div>
+          <div class="form-text"
+            *ngIf="CollegeLocation.errors?.['minlength'] && (CollegeLocation.touched || CollegeLocation.dirty)">Enter
+            valid Location </div>
+          <div class="form-text"
+            *ngIf="CollegeLocation.errors?.['pattern'] && (CollegeLocation.touched || CollegeLocation.dirty)"> number is
+            not allowed. </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div [formGroup]="ProfDetailsForm" class="prof-qualification">
+    <div class="header-bar">
+      <p>Professional Qualifications</p>
+      <div class="img-contain prof_qualification_image">
+
+      </div>
+    </div>
+    <div class="prof_qualification_menu">
+      <div class="applicant-type">
+        <p>Applicant Type*</p>
+        <div matrad class="ap-btns" >
+
+
+          <div class="ap1">
+            <input type="radio" id="fresherRadio" checked="checked" name="applicant">
+            <label for="fresherRadio"> Fresher</label>
+          </div>
+          <div class="ap2">
+            <input type="radio" id="ExperienceRadio" name="applicant">
+            <label for="ExperienceRadio"> Experienced</label>
+
+          </div>
+
+
+        </div>
+      </div>
+      <div class="applicant-details fresher">
+        <p>Select All The Technologies You Are Familiar In</p>
+        <div class="tech-selector">
+          <div class="tech">
+            <input type="checkbox" name="TechChecks" id="Technologies" />
+            <label for="TechChecks">Javascript</label>
+          </div>
+          <div class="tech">
+            <input type="checkbox" name="TechChecks" id="Technologies" />
+            <label for="TechChecks">Angular JS</label>
+          </div>
+          <div class="tech">
+            <input type="checkbox" name="TechChecks" id="Technologies" />
+            <label for="TechChecks">React</label>
+          </div>
+          <div class="tech">
+            <input type="checkbox" name="TechChecks" id="Technologies" />
+            <label for="TechChecks">Node JS</label>
+          </div>
+          <div class="tech">
+            <input type="checkbox" name="TechChecks" id="Technologies" />
+            <label for="TechChecks">others</label>
+          </div>
+        </div>
+        <div class="others">
+          <p>If others, please mention</p>
+          <input type="text" name="others" id="others" class="textfield">
+        </div>
+        <div class="appeared">
+          <p>Have You Appeared For Any Test By Zeus in the past 12 months?*</p>
+          <div class="rd-btns">
+            <div class="rd">
+              <input type="radio" id="Appereadyes" name="Appeared" checked="checked">
+              <label for="Appereadyes"> Yes</label>
+
+            </div>
+            <div class="rd">
+              <input type="radio" id="AppereadNo" name="Appeared">
+              <label for="AppereadNo"> No</label>
+            </div>
+          </div>
+        </div>
+        <div class="yes-role">
+          <p>If Yes, which role did you apply for?</p>
+          <input type="text" name="role" id="role" class="textfield">
+        </div>
+      </div>
+      <div class="applicant-details experienced">
+        <div class="years">
+          <p>Years of Experience*</p>
+          <input type="text" id="years" class="small" formControlName="yearExperience">
+          <div class="validation">
+            <div class="form-text" *ngIf="yearExperience.errors?.['required']
+               && (yearExperience.touched || yearExperience.dirty)">experience year  is required*</div>
+            <div class="form-text"
+              *ngIf="yearExperience.errors?.['pattern'] && (yearExperience.touched || yearExperience.dirty)"> alphabet is
+              not allowed. </div>
+  
+          </div>
+
+        </div>
+        <div class="current-ctc">
+          <p>Current CTC* (In Rupees)</p>
+          <input type="text" id="ctc" class="small" formControlName="currentCTC">
+          <div class="validation">
+            <div class="form-text" *ngIf="currentCTC.errors?.['required']
+               && (currentCTC.touched || currentCTC.dirty)">current CTC  is required*</div>
+            <div class="form-text"
+              *ngIf="currentCTC.errors?.['pattern'] && (currentCTC.touched || currentCTC.dirty)"> alphabet is
+              not allowed. </div>
+  
+          </div>
+
+        </div>
+        <div class="expected-ctc">
+          <p>Expected CTC* (In Rupees)</p>
+          <input type="text" id="current-ctc" class="small" formControlName="expectedCTC">
+          <div class="validation">
+            <div class="form-text" *ngIf="expectedCTC.errors?.['required']
+               && (expectedCTC.touched || expectedCTC.dirty)">expected CTC  is required*</div>
+            <div class="form-text"
+              *ngIf="expectedCTC.errors?.['pattern'] && (expectedCTC.touched || expectedCTC.dirty)"> alphabet is
+              not allowed. </div>
+  
+          </div>
+        </div>
+        <div class="expertise">
+          <p>Select All The Technologies You Expertise In*</p>
+          <div class="tech-selector">
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Javascript</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Angular JS</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">React</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Node JS</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">others</label>
+            </div>
+          </div>
+          <div class="others">
+            <p>If others, please mention</p>
+            <input type="text" name="others" id="others" class="textfield">
+          </div>
+        </div>
+        <div class="familiar">
+          <p>Select All The Technologies You Are Familiar In</p>
+          <div class="tech-selector">
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Javascript</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Angular JS</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">React</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">Node JS</label>
+            </div>
+            <div class="tech">
+              <input type="checkbox" name="TechChecks" id="Technologies" />
+              <label for="TechChecks">others</label>
+            </div>
+            <div class="others">
+              <p>If others, please mention</p>
+              <input type="text" name="others" id="others" class="textfield">
+            </div>
+          </div>
+          <div class="notice-period appeared">
+            <p class="appear">Are you currently on notice period?*</p>
+            <div class="rd-btns">
+              <div class="rd yes">
+                <input type="radio" id="Noticeyes" name="NoticePeriod" checked="checked">
+                <label for="Noticeyes"> Yes</label>
+              </div>
+              <div class="rd no">
+                <input type="radio" id="Noticeno" name="NoticePeriod">
+                <label for="Noticeno">No</label>
+
+              </div>
+            </div>
+            <div class="notice-info">
+              <div class="info">
+                <p>If Yes, when will your notice period end?*</p>
+                <input type="date" class="custom-select">
+              </div>
+              <div class="info">
+                <p>How long is your notice period?* (Mention in months)</p>
+                <select name="months" id="month" class="custom-select">
+                  <option value="2 months">2 months</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="appeared">
+            <p>Have You Appeared For Any Test By Zeus in the past 12 months?*</p>
+            <div class="rd-btns">
+              <div class="rd">
+                <input type="radio" id="Appyes" name="Appered12months" checked="checked">
+                <label for="Appyes"> Yes</label>
+
+
+              </div>
+              <div class="rd">
+                <input type="radio" id="Appno" name="Appered12months">
+                <label for="Appno">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="yes-role">
+            <p>If Yes, which role did you apply for?</p>
+            <input type="text" name="role" id="role" class="textfield">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btns">
+      <button (click)="back()" class="btn">
+        PREVIOUS
+      </button>
+      <button (click)="qualificationSubmit()" [disabled]="EducationDetailsForm.invalid || ProfDetailsForm.invalid " routerLink="/create-account/review-details" class="btn">
+        NEXT
+      </button>
+    </div>
+  </div>
+</main>

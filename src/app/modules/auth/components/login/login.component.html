@@ -1,0 +1,54 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <div class="Header-title">
+  
+      <h1>Log in</h1>
+    </div>
+    <form  (ngSubmit)="loginSubmited()"  [formGroup]="loginForm">
+  
+      <div class="username">
+        <input type="email" name="username" id="username"  class="login-info" formControlName= "EmailId" placeholder="Email ID*" />
+        <p class="forgot-text">FORGOT EMAIL ID?</p>
+        <div class="validation">
+          <div class="form-text" *ngIf=" EmailId.errors?.['required']
+           && (EmailId.touched || EmailId.dirty)">Email Id is required*</div>
+           <div class="form-text" *ngIf="EmailId.errors?.['email']
+           && (EmailId.touched)">Email Id is invalid*</div>
+        </div>
+      </div>
+      <div class="input-password">
+        <input type="password" name="password" id="password" class="login-info" formControlName= "Password" placeholder="Password*" />
+        <div class="validation">
+        <div class="form-text" *ngIf="Password.errors?.['required']
+        && Password.touched">Password is required*</div>
+        <div class="form-text" *ngIf="(Password.errors?.['minlength'] || Password.errors?.['maxlength'] &&  (Password.touched || Password.dirty))
+        ">Minimum 6 And max 15 Charactors*</div>
+        </div>
+        <img src="./assets/images/preview.svg" class="eye-icon" alt="preview" />
+        <p class="forgot-text">FORGOT PASSWORD?</p>
+      
+      </div>
+      <div class="rememberMe">
+        <input type="checkbox" name="rememberCheck" id="rememberCheck" />
+        <label for="rememberCheck">Remember Me</label>
+      </div>
+      <button [disabled]="loginForm.invalid" type="button" (click)="loginSubmited()"  routerLink="/home/walkin-page" class="LoginButton">LOG IN</button>
+  
+  
+    </form>
+    <div class="createAcc">
+      <p class="notRegister">Not Registered Yet?</p>
+      <button   routerLink= "/create-account/main-details" class="createButton">
+        Create An Account </button>
+    </div>
+  
+  </div>
+  
+  
+  <div class="about">
+    <a href="">About</a>
+  
+    <span>|</span>
+    <a href="">Contact Us</a>
+  </div>
+  

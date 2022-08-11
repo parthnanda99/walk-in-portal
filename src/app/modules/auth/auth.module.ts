@@ -1,25 +1,38 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { AuthComponent } from './auth.component';
+import { QualificationComponent } from './components/register/qualification/qualification.component';
 
-import { AuthRoutingModule } from './auth-routing.module';
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { QualificationComponent } from './pages/register/qualification/qualification.component';
-import { ReviewComponent } from './pages/register/review/review.component';
-
+import { MainDetailsComponent } from './components/register/main-details/main-details.component';
+import { ReviewComponent } from './components/register/review/review.component';
+import { CreateAccountBarComponent } from 'src/app/shared/components/create-account-bar/create-account-bar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NavBarComponent } from 'src/app/shared/components/nav-bar/nav-bar.component';
 
 
 @NgModule({
   declarations: [
-
     LoginComponent,
+
     RegisterComponent,
+    AuthComponent,
     QualificationComponent,
-    ReviewComponent
+    CreateAccountBarComponent,
+NavBarComponent,
+    MainDetailsComponent,
+     ReviewComponent,
+
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule  
+
+    
+
   ]
 })
 export class AuthModule { }
